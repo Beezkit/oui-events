@@ -20,5 +20,20 @@
 <body <?php body_class(); ?>>
 
 <header>
+    <div class="menuBurger">
+        <span class="menuTop"></span>
+        <span class="menuMid"></span>
+        <span class="menuBot"></span>
+    </div>
 
+    <div class="logo">
+        <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Oui Events! Organisatrice d'événement'" class="img-fluid" />
+        </a>
+        <h1><?php bloginfo( 'description' ); ?></h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
+    </nav>
 </header>
