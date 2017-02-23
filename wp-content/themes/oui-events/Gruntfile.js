@@ -49,18 +49,9 @@ module.exports = function(grunt) {
       }
     },
 
-    sprite:{
-      all: {
-        src: 'images/*.png',
-        dest: 'images/sprite.png',
-        destCss: 'scss/_sprites.scss',
-        padding: 20
-      }
-    }
-
   })
 
   // Définition des tâches Grunt
-  grunt.registerTask('default', ['jshint', 'sass', 'sprite', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'sass', 'uglify']);
 
 }
