@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+	heightWindows = $(window).innerHeight();
 
 	$('.menuBurger').on('click',function(){
 		if ($(this).hasClass('open')) {
@@ -50,5 +51,7 @@ $(document).ready(function(){
 
 	})();
 	/****** </--ANIMATION HEADER--> ******/
+
+	$('.img-accueil .thumb').css('height', heightWindows);
 
 });
