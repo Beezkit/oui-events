@@ -30,4 +30,21 @@
 
         <?php wp_reset_query(); ?>
     </div>
+    <div id="prestation">
+        <?php query_posts( array ( 'post_type' => 'prestation', 'order' => 'ASC', 'posts_per_page' => '9'  ) ); ?>
+        <h2>Prestations :</h2>
+        <span class="border-title"></span>
+            <?php while ( have_posts() ) : the_post(); ?>
+
+                <article class="col-md-4">
+                    <?php the_post_thumbnail('article', array('class' => 'img-fluid'));?>
+                    <h3><?php the_title(); ?></h3>
+                    <?php the_excerpt();?>
+                </article>
+
+
+            <?php endwhile; ?>
+
+        <?php wp_reset_query(); ?>
+    </div>
 </div>

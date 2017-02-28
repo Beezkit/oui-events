@@ -11,6 +11,13 @@ h2 {
     font-weight: 700;
 }
 
+h3 {
+    color: $black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
@@ -71,6 +78,21 @@ header {
     h2 {
         &:first-letter {
             color: $bleu;
+        }
+    }
+}
+
+#prestation {
+    margin: 40px auto;
+    article {
+        float: left;
+        margin: 40px 0;
+        h3 {
+            margin: 15px 0;
+            text-align: center;
+        }
+        p {
+            text-align: center;
         }
     }
 }
