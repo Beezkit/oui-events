@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/classie.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/global.min.js"></script>
 
     <?php wp_head(); ?>
@@ -21,20 +22,22 @@
 <body <?php body_class(); ?>>
 
 <header>
-    <div class="menuBurger">
-        <span class="menuTop"></span>
-        <span class="menuMid"></span>
-        <span class="menuBot"></span>
-    </div>
+    <div class="container">
+        <div class="menuBurger">
+            <span class="menuTop"></span>
+            <span class="menuMid"></span>
+            <span class="menuBot"></span>
+        </div>
 
-    <div class="logo">
-        <a href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Oui Events! Organisatrice d'événement'" class="img-fluid" />
-        </a>
-        <h1><?php bloginfo( 'description' ); ?></h1>
-    </div>
+        <div class="logo">
+            <a href="<?php echo home_url(); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Oui Events! Organisatrice d'événement'" class="img-fluid" />
+            </a>
+            <h1><?php bloginfo( 'description' ); ?></h1>
+        </div>
 
-    <nav class="navbar navbar-default">
-        <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
-    </nav>
+        <nav class="navbar navbar-default">
+            <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
+        </nav>
+    </div>
 </header>

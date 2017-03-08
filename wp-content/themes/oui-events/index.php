@@ -11,7 +11,6 @@
         <?php endwhile; ?>
     </div>
     <?php wp_reset_query(); ?>
-<?php get_footer(); ?>
 
 <div class="container">
     <div id="presentation">
@@ -34,6 +33,8 @@
         <?php query_posts( array ( 'post_type' => 'prestation', 'order' => 'ASC', 'posts_per_page' => '9'  ) ); ?>
         <h2>Prestations :</h2>
         <span class="border-title"></span>
+
+        <div class="row">
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <article class="col-md-4">
@@ -45,6 +46,58 @@
 
             <?php endwhile; ?>
 
+        </div>
+
         <?php wp_reset_query(); ?>
+
+        <div class="clearfix"></div>
+
     </div>
+
 </div>
+
+<div class="separator"></div>
+
+<div class="container">
+
+    <div id="blog">
+
+        <h2>Le blog</h2>
+        <span class="border-title"></span>
+
+        <div class="row">
+
+        <?php if (have_posts()) : ?>
+
+            <?php while (have_posts()) : the_post(); ?>
+
+                <article class="col-sm-6 col-sm-4 col-lg-3">
+
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="thumbnail">
+                            <?php the_post_thumbnail('article', array('class' => 'img-fluid')); ?>
+                        </div>
+
+                        <h3><?php the_title(); ?></h3>
+
+                        <?php the_excerpt(); ?>
+
+                        <span class="read-more btn">Lire la suite <i class="fa fa-plus"></i></span>
+
+                    </a>
+
+                </article>
+
+            <?php endwhile; ?>
+
+            <div class="clearfix"></div>
+
+        <?php endif; ?>
+
+        </div>
+
+    </div>
+
+</div>
+
+<?php get_footer(); ?>

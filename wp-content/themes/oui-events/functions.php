@@ -3,6 +3,8 @@
 add_theme_support( 'post-thumbnails');
 the_post_thumbnail();                  // without parameter -> 'post-thumbnail'
 add_image_size('article', 480, 320, true);
+add_image_size('list-article', 555, 250, true);
+add_image_size( 'singleBlog', 1280, 350, true );
 
 register_nav_menus( array(
     'Top' => 'Navigation principale',
@@ -74,3 +76,19 @@ register_post_type(
         'has_archive' => true
     )
 );
+
+function get_pagination_links() {
+    global $wp_query;
+    $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+    $big = 999999999;
+
+    return paginate_links( array(
+        'base' => @add_query_arg('paged','%#%'),
+        'format' => '?paged=%#%',
+        'current' => $current,
+        'total' => $wp_query->max_num_pages,
+        'prev_next'    => 'false',
+        'prev_text'          => __('<'),
+        'next_text'          => __('>'),
+    ) );
+}
