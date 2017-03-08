@@ -308,6 +308,31 @@ header {
     }
 }
 
+.single {
+    .single-thumbnail {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2d2d2d;
+        text-align: center;
+        &:first-letter {
+            text-transform: uppercase;
+            color: $bleu;
+        }
+    }
+    .single-contain {
+        margin-bottom: 20px;
+        .posted {
+            margin: 20px auto;
+            font-weight: 300;
+            font-size: 11px;
+        }
+    }
+}
+
 #contact {
     margin-top: 20px;
     .form-group {
