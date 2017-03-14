@@ -7,6 +7,7 @@
     <meta name="author" content="Oui Events" />
     <meta name="copyright" content="Copyright (c)2017 Oui Events Tout droit reservé." />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="google-site-verification" content="elfg3V1h5S710XENw6vG2h_rUrRHRnf1MskNwOWwTM4" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
